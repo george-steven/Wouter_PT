@@ -1,5 +1,5 @@
 const sql = require('mssql');
-const { app, BrowserWindow, dialog } = require('electron');
+const { app, BrowserWindow, dialog, protocol  } = require('electron');
 // auto updater
 const { autoUpdater } = require('electron-updater');
 require('dotenv').config()
@@ -27,7 +27,7 @@ function createWindow () {
   // mainWindow.loadFile('dist/sync/index.html')
 
   const syncPath = path.join(__dirname, 'dist', 'sync', 'index.html');
-  mainWindow.loadURL(`file://${syncPath}`);
+  mainWindow.loadFile(`${syncPath}`);
 
   // Path to the Excel file
   const filePath = path.join(__dirname, 'src/assets/Exercises.xlsm');
@@ -90,11 +90,6 @@ ipcMain.on('exit-app', (event) => {
 });
 
 app.whenReady().then(() => {
-  protocol.interceptFileProtocol('file', (request, callback) => {
-    const url = request.url.substr(7); // Strip off the 'file://' part
-    callback({ path: path.normalize(`${__dirname}/${url}`) });
-  });
-
     createWindow();
     // updateApp();
     // connectToDatabase();

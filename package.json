@@ -20,6 +20,7 @@
     "appId": "wg-pt-db",
     "productName": "WG PT DB",
     "icon": "src/assets/icon.ico",
+    "asar": false,
   "mac": {
     "target": [
       {
