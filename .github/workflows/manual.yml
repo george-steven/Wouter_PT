@@ -16,13 +16,16 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: '18'  # Gebruik een nieuwere versie van Node.js
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build
-        run: npm run build
+      - name: Build app
+        run: npm run pack
+
+      - name: Build DMG
+        run: npm run dmg
 
       - name: Upload DMG
         uses: actions/upload-artifact@v3
