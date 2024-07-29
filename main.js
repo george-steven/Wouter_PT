@@ -16,7 +16,9 @@ function createWindow () {
     height: 900,
     webPreferences: {
       nodeIntegration: true,
-      contextIsolation: false
+      contextIsolation: false,
+      webSecurity: false, // Only for development!
+      allowRunningInsecureContent: true // Only for development!
     },
     icon: __dirname + '/dist/sync/assets/icon.ico',
   });
@@ -26,7 +28,6 @@ function createWindow () {
 
   const syncPath = path.join(__dirname, 'dist', 'sync', 'index.html');
   mainWindow.loadURL(`file://${syncPath}`);
-
 
   // Path to the Excel file
   const filePath = path.join(__dirname, 'src/assets/Exercises.xlsm');
@@ -89,6 +90,11 @@ ipcMain.on('exit-app', (event) => {
 });
 
 app.whenReady().then(() => {
+  protocol.interceptFileProtocol('file', (request, callback) => {
+    const url = request.url.substr(7); // Strip off the 'file://' part
+    callback({ path: path.normalize(`${__dirname}/${url}`) });
+  });
+
     createWindow();
     // updateApp();
     // connectToDatabase();
@@ -103,3 +109,9 @@ app.on('window-all-closed', () => {
     }
     }
 );
+
+app.on('activate', () => {
+  if (BrowserWindow.getAllWindows().length === 0) {
+    createWindow();
+  }
+});
