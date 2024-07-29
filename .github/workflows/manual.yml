@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  build-macos:
     runs-on: macos-latest
 
     steps:
@@ -24,10 +24,36 @@ jobs:
       - name: Build app
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: npm run build
+        run: npm run dist
 
       - name: Upload DMG
         uses: actions/upload-artifact@v3
         with:
           name: my-app-dmg
           path: dist/*.dmg
+
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build app
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: npm run dist
+
+      - name: Upload NSIS Installer
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-app-windows
+          path: dist/*.exe

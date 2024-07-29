@@ -20,21 +20,21 @@
     "appId": "wg-pt-db",
     "productName": "WG PT DB",
     "icon": "src/assets/icon.ico",
-    "mac": {
-      "target": [
-        {
-          "target": "dmg",
-          "arch": [
-            "x64",
-            "arm64"
-          ]
-        }
-      ],
-      "category": "public.app-category.utilities"
-    },
-    "win": {
-      "target": "nsis"
-    }
+  "mac": {
+    "target": [
+      {
+        "target": "dmg",
+        "arch": [
+          "x64",
+          "arm64"
+        ]
+      }
+    ],
+    "category": "public.app-category.utilities"
+  },
+  "win": {
+    "target": "nsis"
+  }
   },
   "private": true,
   "dependencies": {
