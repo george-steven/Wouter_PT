@@ -1,0 +1,21 @@
+<!--  -->
+<!-- <input type="file" (change)="onFileChange($event)" /> -->
+<form >
+    <table>
+        <thead>
+            <tr>
+                <th>Naam</th>
+                <th>Tags</th>
+                <th>Video</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of filteredData">
+                <td><div>{{row.name}}</div></td>
+                <td><div>{{row.tags}}</div></td>
+                <td><div>{{row.link}}</div></td>
+            </tr>
+         
+        </tbody>
+    </table>
+</form>

@@ -1,0 +1,58 @@
+@import "../../../../variables";
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1em;
+    height: 100%;
+    .logo{
+    }
+    .nav-item{
+        margin: 0.5em auto;
+        width: 100%;
+        a{
+            padding: 0.5em;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: capitalize;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin-top: 2em;
+            color: #797979;
+            text-decoration: none;
+            border-radius: 5px;
+            .icon{
+                color: $arinto-blue;
+                margin-right: 0.5em;
+            }
+            &:hover{
+                background-color: rgba($color: #000000, $alpha: 0.05);
+            }
+        }
+    }
+    .logout{
+        margin-top: auto;
+        cursor: pointer;
+        margin-bottom: 2em;
+        width: 100%;
+        a{
+            padding: 0.5em;
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #797979;
+            text-decoration: none;
+            border-radius: 5px;
+            .icon{
+                color: $arinto-blue;
+                margin-right: 0.5em;
+            }
+            &:hover{
+                background-color: rgba($color: #000000, $alpha: 0.05);
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+<div class="wrapper">
+    <div class="logo">
+      <h1>PT - DB</h1>
+      <!-- <img src="assets/logo.svg" alt="logo"> -->
+    </div>
+    <!-- <div class="nav-item" *ngFor="let item of links">
+        <a routerLinkActive="active" [routerLink]="item.route">
+          <mat-icon class="icon">{{item.icon}}</mat-icon>
+          <span>{{item.name}}</span>
+        </a>
+    </div> -->
+    <div class="nav-item" *ngFor="let item of links">
+      <a routerLinkActive="active" [routerLink]="item.route">
+        <mat-icon class="icon">search</mat-icon>
+        <mat-select [formControl]="tags" multiple placeholder="Tags">
+          <mat-option *ngFor="let tag of exerciseTags" [value]="tag">{{tag}}</mat-option>
+        </mat-select>
+      </a>
+  </div>
+    <div class="logout nav-item">
+        <a routerLinkActive="active" (click)="exit()">
+          <mat-icon class="icon">exit_to_app</mat-icon>
+          <span>Exit application</span>
+        </a>
+    </div>
+</div>

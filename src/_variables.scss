@@ -1,0 +1,159 @@
+/* Colors */
+$light-gray: #fafafa;
+$lighter-gray: #ededed;
+$gray: #b0bec5;
+$dark-gray: rgb(146, 146, 146);
+$black-gray: rgb(41, 41, 41);
+$error-red: #e30613;
+$arinto-blue: #1c79a3;
+$arinto-blue-600: #1c79a3;
+$arinto-accent: #12b282;
+$info-green: green;
+$arinto-pink: #b4004e;
+$arinto-button: #12b282;
+$arinto-filter: #d6d6d6;
+$arinto-header: rgb(102, 102, 102);
+$arinto-h1: #6c6c6c;
+$arinto-gridtext: #9b9b9b;
+
+$backgroundcolor: #fafafa;
+
+$light: #f5f5f5;
+$light-alt: #c0c0c0;
+$light-opacity: #efefef;
+/* Fonts */
+$body-font-size: 14px;
+$subheader-font-size: 14px;
+$subheader-font-weight: 500;
+$subheader-line-height: 24px;
+
+/* Responsive breakpoints
+ ..for custom media queries: keep this in sync with angular flex: https://github.com/angular/flex-layout/blob/master/src/lib/core/breakpoints/data/break-points.ts#L14 */
+$breakpoint-xs: 599px;
+
+/*status
+ $projectevaluation-status-deleted: #ff7058;
+ $projectevaluation-status-approved: #45D39F;
+ $projectevaluation-status-revoked: #8C76A8;
+ $projectevaluation-status-closed: #00BFAD;
+ $projectevaluation-status-open: #1c79a3;
+*/
+
+$projectevaluation-status-deleted: #8a8786;
+$projectevaluation-decline: #ff7058;
+$projectevaluation-status-approved: #009394;
+$projectevaluation-status-revoked: rgb(174, 109, 180);
+$projectevaluation-status-closed: #8c76a8;
+$projectevaluation-status-open: #d69f39;
+
+$project-type-simple: #ffb300;
+$project-type-recurrence: #5f9ea0;
+$project-type-other: #5f9ea0;
+$project-type-full: #1c79a3;
+
+/*update colors.ts -> steps when changing this*/
+$project-status-initial: #0eb0c5;
+$project-status-forecast: #d1d351; 
+$project-status-free: #b2b210; 
+$project-status-fixed: #2397CC; 
+$project-status-planned: #2a8a8d;
+$project-status-onhold: #d98e1d; 
+$project-status-busy: #9060a8; 
+$project-status-completed: #65496d; 
+$project-status-finished: #5b6d87; 
+$project-status-cancelled: #a9a9a9; 
+
+$materialrequirement-status-cancelled: #8a8786;
+$materialrequirement-status-busy: #009394;
+$materialrequirement-status-executed: rgb(174, 109, 180);
+$materialrequirement-status-registered: #8c76a8;
+$materialrequirement-status-planned: #d69f39;
+$materialrequirement-status-to-approve: #38ac7b;
+
+$material-type-purchase: #a939d6;
+$material-type-stock: #39d6ce;
+$material-status-replenish: #ce411e;
+$material-status-executed: #009394;
+
+$order-status-requested: #1c79a3;
+$order-status-planned: #d69f39;
+$order-status-approved: #38ac7b;
+$order-status-confirmed: #008080;
+$order-status-ordered: #009394;
+$order-status-delivered: #8c76a8;
+$order-status-cancelled: #8a8786;
+
+$leave-status-requested:#1c79a3;
+$leave-status-approved: #38ac7b;
+$leave-status-rejected: #ce411e;
+$leave-status-cancelled: #8a8786;
+$leave-status-completed: #8c76a8;
+
+$workflow-status-requested: #1d81ae;
+$workflow-status-started: #9060a8;
+$workflow-status-busyneedparameters: #d98e1d;
+$workflow-status-completed: #65496d;
+$workflow-status-error:  #ff7058;
+
+$timeregistration-status-new:#1c79a3;
+$timeregistration-status-planned:#d69f39;
+$timeregistration-status-started: #38ac7b;
+$timeregistration-status-paused: #2c8d64;
+$timeregistration-status-finished: #008080;
+$timeregistration-status-approved: #8c76a8;
+$timeregistration-status-rejected: #ff7058;
+$timeregistration-status-cancelled: #8a8786;
+
+$timesheet-status-open:#1c79a3;
+$timesheet-status-busy: #9060a8;
+$timesheet-status-closed: #65496d;
+
+$expense-registration-status-open:#1c79a3;
+$expense-registration-status-approved: #8c76a8;
+$expense-registration-status-rejected: #ff7058;
+$expense-registration-status-cancelled: #8a8786;
+
+$travel-registration-status-executed:#1c79a3;
+$travel-registration-status-approved: #8c76a8;
+$travel-registration-status-rejected: #ff7058;
+$travel-registration-status-cancelled: #8a8786;
+
+
+$activity-registration-status-open:#1c79a3;
+$activity-registration-status-skipped:#d98e1d;
+$activity-registration-status-executed:#008080;
+$activity-registration-status-approved: #8c76a8;
+$activity-registration-status-rejected: #ff7058;
+$activity-registration-status-cancelled: #8a8786;
+
+
+$task-status-forecast: #ce411e;
+$task-status-initial:#0EB0C5;
+$task-status-free: #1d81ae;
+$task-status-released: #2a8a8d;
+$task-status-busy: #9060a8;
+$task-status-onhold: #d98e1d;
+$task-status-completed: #65496d;
+$task-status-finished: #5b6d87;
+$task-status-cancelled: #a9a9a9;
+
+$assignmentStatus-status-forecast: #ce411e;
+$assignmentStatus-status-initial: #0eb0c5;
+$assignmentStatus-status-fixed: #1d81ae;
+$assignmentStatus-status-frozen: #159e76;
+$assignmentStatus-status-released: #2a8a8d;
+$assignmentStatus-status-busy: #9060a8;
+$assignmentStatus-status-onhold: #d98e1d;
+$assignmentStatus-status-completed: #65496d;
+$assignmentStatus-status-finished: #5b6d87;
+$assignmentStatus-status-cancelled: #a9a9a9;
+
+$remarkStatus-status-active: #1d81ae;
+$remarkStatus-status-toberesolved: #2a8a8d;
+$remarkStatus-status-onhold: #d98e1d;
+$remarkStatus-status-resolved: #65496d;
+$remarkStatus-status-cancelled: #a9a9a9;
+
+
+$property-definition-status-active: #009394;
+$property-definition-status-inactive: #ce411e;
