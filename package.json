@@ -34,7 +34,12 @@
     },
     "win": {
       "target": "nsis"
-    }
+    },
+    "files": [
+        "!*.*",
+        "!**/*",
+        "dist/YourApp/**/*"
+    ]
   },
   "private": true,
   "dependencies": {
