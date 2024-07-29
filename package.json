@@ -35,13 +35,7 @@
     "win": {
       "target": "nsis"
     },
-    "linux": {
-      "icon": "src/assets/icon.ico"
-    },
-    "nsis": {
-      "artifactName": "wgptdb-setup.${ext}",
-      "uninstallDisplayName": "wgptdb"
-    },
+   
     "directories": {
       "buildResources": "build"
     },
@@ -62,7 +56,6 @@
     ],
     "files": [
       "dist/**/*",
-      "node_modules/**/*",
       "package.json",
       "main.js",
       "src/assets/**/*",
