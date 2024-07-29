@@ -3,7 +3,7 @@ const { app, BrowserWindow, dialog, protocol  } = require('electron');
 // auto updater
 const { autoUpdater } = require('electron-updater');
 const path = require('path'); // Voeg deze regel toe
-const envFile = process.env.NODE_ENV === 'production' ? '.env.production' : '.env';
+const envFile = '.env';
 require('dotenv').config({ path: path.resolve(__dirname, envFile) });
 let mainWindow;
 const os = require('os');
