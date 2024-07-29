@@ -20,9 +20,12 @@ function createWindow () {
     },
     icon: __dirname + '/dist/sync/assets/icon.ico',
   });
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
   mainWindow.maximize();
-  mainWindow.loadFile('dist/sync/index.html')
+  // mainWindow.loadFile('dist/sync/index.html')
+
+  const syncPath = path.join(__dirname, 'dist', 'sync', 'index.html');
+  mainWindow.loadURL(`file://${syncPath}`);
 
 
   // Path to the Excel file
