@@ -14,7 +14,7 @@
     "dist": "ng build --configuration=production && electron-builder -p always",
     "pack": "electron-packager . wgptdb --platform=darwin --arch=x64 --out=dist --overwrite",
     "dmg": "electron-installer-dmg dist/wgptdb-darwin-x64/wgptdb.app wgptdb",
-    "postinstall": "electron-builder install-app-deps",
+    "postinstall": "electron-builder install-app-deps"
   },
   "build": {
     "appId": "wg-pt-db",
