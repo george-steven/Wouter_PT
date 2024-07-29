@@ -26,7 +26,7 @@ function createWindow () {
   mainWindow.maximize();
   // mainWindow.loadFile('dist/sync/index.html')
 
-  const syncPath = path.join(__dirname, 'dist', 'sync', 'index.html');
+  const syncPath = path.join(__dirname, 'dist', 'src', 'index.html');
   mainWindow.loadFile(`${syncPath}`);
 
   // Path to the Excel file
