@@ -34,34 +34,7 @@
     },
     "win": {
       "target": "nsis"
-    },
-   
-    "directories": {
-      "buildResources": "build"
-    },
-    "extraResources": [
-      {
-        "from": "./.env",
-        "to": "."
-      }
-    ],
-    "extraFiles": [
-      {
-        "from": "./.env",
-        "to": ".",
-        "filter": [
-          "**/*"
-        ]
-      }
-    ],
-    "files": [
-      "dist/**/*",
-      "package.json",
-      "main.js",
-      "src/assets/**/*",
-      "./.env"
-    ],
-    "asar": true
+    }
   },
   "private": true,
   "dependencies": {
