@@ -2,10 +2,11 @@ const sql = require('mssql');
 const { app, BrowserWindow, dialog, protocol  } = require('electron');
 // auto updater
 const { autoUpdater } = require('electron-updater');
-require('dotenv').config()
+const path = require('path'); // Voeg deze regel toe
+const envFile = process.env.NODE_ENV === 'production' ? '.env.production' : '.env';
+require('dotenv').config({ path: path.resolve(__dirname, envFile) });
 let mainWindow;
 const os = require('os');
-const path = require('path'); // Voeg deze regel toe
 const url = require('url');
 const fs = require('fs');
 const XLSX = require('xlsx');
@@ -25,8 +26,9 @@ function createWindow () {
   mainWindow.webContents.openDevTools()
   mainWindow.maximize();
   // mainWindow.loadFile('dist/sync/index.html')
-
-  const syncPath = path.join(__dirname, 'dist', 'src', 'index.html');
+  // Determine the syncPath based on the environment
+  var subfolder = process.env.subfolder;
+    syncPath = path.join(__dirname, subfolder, 'index.html');
   mainWindow.loadFile(`${syncPath}`);
 
   // Path to the Excel file

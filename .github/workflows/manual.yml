@@ -21,6 +21,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Set Node.js environment
+        run: echo "NODE_ENV=production" >> $GITHUB_ENV
+
       - name: Build app
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -46,6 +49,9 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        
+      - name: Set Node.js environment
+        run: echo "NODE_ENV=production" >> $GITHUB_ENV
 
       - name: Build app
         env:
